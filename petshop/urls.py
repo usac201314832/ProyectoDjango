@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static 
 from petshop import views as general
 from users import views as users 
 
 urlpatterns = [
-    path('', general.homepage),
-    path('admin/', admin.site.urls),
-    path('login/', users.logon),
-]
+    path('', general.homepage, name = "homepage"),
+    path('admin/', admin.site.urls, name = "administration"),
+    path('login/', users.logon, name = "logon"),
+]  + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)
+ 

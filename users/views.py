@@ -1,7 +1,9 @@
 """
+Pantalla de login
 Vistas de Users
 """
-from django.http import HttpResponse
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render
 
 def logon(request):
-    return HttpResponse("Pagina de formulario de ingreso:")
+    return render(request, 'login.html')

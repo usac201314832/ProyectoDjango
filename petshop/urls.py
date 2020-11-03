@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from petshop import views as general
+from users import views as users 
 
 urlpatterns = [
+    path('', general.homepage),
     path('admin/', admin.site.urls),
+    path('login/', users.logon),
 ]

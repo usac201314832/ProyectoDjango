@@ -2,7 +2,10 @@
     Archivo general de vistas del proyecto
     Login/homepage
 """
-from django.http import HttpResponse
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
+
+@login_required
 def homepage(request):
-    return HttpResponse ("Bienvenido a la pagina principal")
+    return render (request,'index.html')

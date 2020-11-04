@@ -15,7 +15,7 @@ def logon(request):
                 login(request, userSession)
                 return redirect("homepage")
             else:
-                return render(request, 'login.html', {'error' : "Invalid username or password"})
+                return render(request, 'index.html', {'error' : "Invalid username or password"})
     return render(request,'login.html')
 
 def logout_view(request):

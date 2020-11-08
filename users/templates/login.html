@@ -13,8 +13,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-10 col-xl-7 mx-auto">
-                            <h3 class="display-4">Login</h3>
-                            <p class="text-muted mb-4">Enter your information to login</p>
+                            <h3 class="display-4">Sesion</h3>
+                            <p class="text-muted mb-4">Ingrese sus datos de acceso</p>
                             <form method="POST" action="{% url 'logon' %}">
                                 {% csrf_token %}
                                 <div class="form-group mb-3">
@@ -25,10 +25,10 @@
                                 </div>
                                 <div class="custom-control custom-checkbox mb-3">
                                     <input id="customCheck1" type="checkbox" checked class="custom-control-input">
-                                    <label for="customCheck1" class="custom-control-label">Remember password</label>
+                                    <label for="customCheck1" class="custom-control-label">Recordar Contraseña</label>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
-                                <div class="text-center d-flex justify-content-between mt-4"><p>Write by <a href="#" class="font-italic text-muted"><u>Judy & Jason</u></a></p></div>
+                                <div class="text-center d-flex justify-content-between mt-4"><p>Write by <a href="#" class="font-italic text-muted"><u>PetShop LatinAmerica</u></a></p></div>
                             </form>
                             {% if  error %}
                                 <p class="alert alert-danger">{{ error }}</p>

@@ -6,10 +6,11 @@ from django.db import models
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    nombres = models.CharField(max_length=50, blank=False) 
-    apellidos = models.CharField(max_length=50, blank=False)
-    email = models.CharField(max_length=50, blank=False)
-    edad = models.CharField(max_length=2, blank=False)
+    nombre = models.CharField(max_length=50, blank=True)
+    apellidos = models.CharField(max_length=50, blank=True) 
+    edad = models.CharField(max_length=2, blank=True)
+    mascotas = models.CharField(max_length=2, blank=True)
+    email = models.CharField(max_length=50, blank=True)
     userImage = models.ImageField(
         upload_to = "users/pictures",
         blank=True,
